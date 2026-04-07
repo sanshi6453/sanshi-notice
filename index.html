@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>スーパーサンシ宅配サービス 最新のお知らせ</title>
+  <style>
+    :root {
+      --main: #2a424c;
+      --accent: #fee846;
+      --bg: #fffdf6;
+      --card: #ffffff;
+      --text: #24343a;
+      --sub: #5b6b71;
+      --line: #dfe6e8;
+      --shadow: 0 10px 30px rgba(42, 66, 76, 0.08);
+      --radius: 18px;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap');
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Zen Maru Gothic', -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+      background: linear-gradient(180deg, #fffef8 0%, #fff9d9 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .wrap {
+      width: min(920px, calc(100% - 24px));
+      margin: 0 auto;
+      padding: 18px 0 40px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--accent) 0%, #fff3a0 100%);
+      border: 2px solid var(--main);
+      border-radius: 24px;
+      padding: 24px 18px;
+      box-shadow: var(--shadow);
+      margin-bottom: 16px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--main);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 6px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      color: var(--main);
+      font-size: clamp(24px, 5.6vw, 40px);
+      line-height: 1.3;
+    }
+
+    .lead {
+      margin: 0;
+      font-size: 15px;
+      color: #213036;
+    }
+
+    .hero-points {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .point {
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(42, 66, 76, 0.12);
+      border-radius: 14px;
+      padding: 12px 14px;
+      font-weight: 600;
+      color: var(--main);
+    }
+
+    .cards {
+      display: grid;
+      gap: 14px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: var(--main);
+      line-height: 1.4;
+      font-weight: 600;
+    }
+
+    .card p {
+      margin: 0 0 12px;
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 14px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .checklist li {
+      background: #f7fafb;
+      border-radius: 12px;
+      padding: 10px 12px;
+      color: var(--text);
+      border: 1px solid #ecf1f2;
+      font-size: 14px;
+    }
+
+    .checklist li::before {
+      content: "✔ ";
+      color: var(--main);
+      font-weight: 500;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: var(--main);
+      color: #fff;
+      font-weight: 400;
+      padding: 12px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+    }
+
+    .btn.secondary {
+      background: #fff;
+      color: var(--main);
+      border: 2px solid var(--main);
+    }
+
+    .cta {
+      background: var(--main);
+      color: #fff;
+      border-radius: 24px;
+      padding: 22px 18px;
+      margin-top: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .cta h2 {
+      color: #fff;
+      margin: 0 0 10px;
+      font-size: 24px;
+      line-height: 1.4;
+    }
+
+    .cta p {
+      margin: 0 0 16px;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .cta-actions {
+      display: grid;
+      gap: 10px;
+    }
+
+    .cta .btn {
+      text-align: center;
+      background: var(--accent);
+      color: var(--main);
+      font-weight: 400;
+      display: block;
+    }
+
+    .cta .btn.secondary {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.7);
+    }
+
+    .note {
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--sub);
+      text-align: center;
+    }
+
+    .highlight {
+      position: relative;
+      display: inline-block;
+    }
+
+    .highlight::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0.1em;
+      width: 100%;
+      height: 0.35em;
+      background: #fff28f;
+      z-index: -1;
+    }
+
+    .highlight-yellow {
+      background: linear-gradient(transparent 75%, #fee846 75%);
+      padding: 0 2px;
+    }
+
+    @media (min-width: 768px) {
+      .hero-points {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cards .full {
+        grid-column: 1 / -1;
+      }
+
+      .cta-actions {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  .cta .btn.line {background:#06C755;color:#fff;}
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="badge">最新のお知らせ</div>
+      <h1>スーパーサンシ宅配サービス<br>最新のお知らせ</h1>
+      <p class="lead">
+        ただいまお得な入会特典や、便利なサービス情報をご案内中です。<br>
+        気になる内容がございましたら、ぜひお気軽にご相談ください。
+      </p>
+      <div class="hero-points">
+        <div class="point">月会費最大<span class="highlight">半年間無料</span></div>
+        <div class="point">3,000円キャッシュバック特典</div>
+        <div class="point">最短2～7日で利用開始可能</div>
+      </div>
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <h2>【期間限定】入会キャンペーン</h2>
+        <p>
+          現在、宅配サービスご入会で3,000円キャッシュバック特典あり。さらに70歳以上・子育て世帯はなんと月会費<span class="highlight-yellow">半年間無料</span>で、始めやすいキャンペーンを実施中です。
+        </p>
+        <ul class="checklist">
+          <li>初めての方でも安心してスタート</li>
+          <li>お得に試しやすい期間限定特典</li>
+          <li>営業担当が直接サポート</li>
+        </ul>
+        <a href="#" class="btn">お申込み・詳細はこちら</a>
+      </article>
+
+      <article class="card">
+        <h2>【大好評】らくだ便 使い放題</h2>
+        <p>
+          お店で買った商品を手ぶらでご自宅までお届け。宅配会員様なら、らくだ便を何度使っても0円でご利用いただけます。
+        </p>
+        <ul class="checklist">
+          <li>重たい荷物もラクラク</li>
+          <li>お買い物は今まで通り楽しめる</li>
+          <li>車がなくても安心して利用可能</li>
+        </ul>
+        <a href="#" class="btn">らくだ便について見る</a>
+      </article>
+
+      <article class="card">
+        <h2>【無料】資源ごみ回収サービス</h2>
+        <p>
+          宅配サービスご利用の方は、ご自宅前で資源ごみ回収サービスをご利用いただけます。外に持って行く手間が減り、日々の負担軽減にもつながります。
+        </p>
+        <ul class="checklist">
+          <li>ご自宅前で回収できて便利</li>
+          <li>重たい資源ごみの持ち運び不要</li>
+          <li>ご高齢の方にもやさしいサービス</li>
+        </ul>
+        <a href="#" class="btn">回収サービスを見る</a>
+      </article>
+
+      <article class="card">
+        <h2>宅配サービスってどんなサービス？</h2>
+        <p>
+          決まった曜日のお届けや、不在時の受け取り対応、冷蔵・冷凍商品の安心管理など、毎日の暮らしを支える便利なサービスです。
+        </p>
+        <ul class="checklist">
+          <li>週に決まった曜日にお届け</li>
+          <li>ご不在時でも受け取りしやすい</li>
+          <li>冷蔵・冷凍商品にも対応</li>
+        </ul>
+        <a href="#" class="btn">初めての方はこちら</a>
+      </article>
+
+      
+    </section>
+
+    <section class="cta">
+      <h2>今すぐご利用スタートできます</h2>
+      <p>
+        通常ご利用開始まで約1ヶ月かかるところ、私 前 里江子(まえ りえこ)が直接サポートすることで、最短2日〜7日でご利用開始いただけます。
+      </p>
+      <div class="cta-actions">
+        <a href="#" class="btn">今すぐ申し込む</a>
+        <a href="#" class="btn secondary">📞電話で相談</a>
+        <a href="#" class="btn line">LINEで無料相談</a>
+      </div>
+    </section>
+
+    <p class="note">※ キャンペーン内容・期間は実際の運用に合わせて書き換えてご利用ください。</p>
+  </main>
+</body>
+</html>
