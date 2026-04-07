@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>お問合せ</title>
+
+<style>
+:root {
+  --main:#2a424c;
+  --accent:#fee846;
+  --card:#ffffff;
+  --text:#24343a;
+  --shadow:0 10px 30px rgba(42,66,76,0.08);
+  --radius:18px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap');
+
+body{
+  margin:0;
+  font-family:'Zen Maru Gothic', sans-serif;
+  background:linear-gradient(#fffef8,#fff9d9);
+  color:var(--text);
+  line-height:1.8;
+}
+
+.wrap{
+  width:min(920px,calc(100% - 24px));
+  margin:auto;
+  padding:20px 0 40px;
+}
+
+.hero{
+  background:linear-gradient(135deg,var(--accent),#fff3a0);
+  border:2px solid var(--main);
+  border-radius:24px;
+  padding:24px 18px;
+  margin-bottom:16px;
+}
+
+.badge{
+  background:var(--main);
+  color:#fff;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
+  display:inline-block;
+  margin-bottom:10px;
+}
+
+h1{
+  margin:0 0 10px;
+  color:var(--main);
+  font-size:28px;
+}
+
+.lead{
+  font-size:15px;
+}
+
+.card{
+  background:#fff;
+  border-radius:var(--radius);
+  padding:18px;
+  margin-bottom:14px;
+  box-shadow:var(--shadow);
+}
+
+.btn-row{
+  display:grid;
+  gap:12px;
+  margin-top:16px;
+}
+
+.btn{
+  display:block;
+  text-align:center;
+  padding:14px;
+  border-radius:999px;
+  text-decoration:none;
+  background:var(--main);
+  color:#fff;
+  font-size:15px;
+}
+
+.btn.line{background:#06C755;}
+.btn.secondary{background:#fff;color:var(--main);border:2px solid var(--main);}
+
+.note{text-align:center;margin-top:14px;font-size:12px;}
+</style>
+</head>
+
+<body>
+<main class="wrap">
+
+<section class="hero">
+<div class="badge">お問合せ</div>
+<h1>今ならお得に始められます</h1>
+<p class="lead">
+月会費最大半年間無料＋3,000円キャッシュバック実施中。<br>
+「まだいいかな」と思っている方こそ、今が一番お得です。
+</p>
+</section>
+
+<section class="card">
+<p>
+ご相談だけでも大丈夫です。<br>
+「ちょっと気になる」段階でもお気軽にご連絡ください。<br>
+前 里江子が直接対応いたします。
+</p>
+
+<div class="btn-row">
+<a href="https://script.google.com/macros/s/AKfycbwB9T4HAlOU1fYD0W9LaRuXJIChEM8xlxVvkrAgLHurRpaAvQn8X5VqkbLWB6RJSVzuAw/exec" class="btn">今すぐ予約する</a>
+<a href="tel:09094256453" class="btn secondary">📞電話で相談</a>
+<a href="https://lin.ee/roJpbkI" class="btn line">LINEで相談する</a>
+</div>
+</section>
+
+<section class="card">
+<p>
+✔ まだ申し込むか迷っている<br>
+✔ 自分に合うかだけ知りたい<br>
+✔ 配達できるか確認したい<br><br>
+そんな方でも大歓迎です。
+</p>
+</section>
+
+<p class="note"><a href="index.html">← お知らせ一覧に戻る</a></p>
+
+</main>
+</body>
+</html>
