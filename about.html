@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>宅配サービスってどんなサービス？</title>
+
+  <style>
+    :root {
+      --main: #2a424c;
+      --accent: #fee846;
+      --card: #ffffff;
+      --text: #24343a;
+      --line: #dfe6e8;
+      --shadow: 0 10px 30px rgba(42, 66, 76, 0.08);
+      --radius: 18px;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap');
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Zen Maru Gothic', -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+      background: linear-gradient(180deg, #fffef8 0%, #fff9d9 100%);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    .wrap {
+      width: min(920px, calc(100% - 24px));
+      margin: 0 auto;
+      padding: 18px 0 40px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--accent) 0%, #fff3a0 100%);
+      border: 2px solid var(--main);
+      border-radius: 24px;
+      padding: 24px 18px;
+      box-shadow: var(--shadow);
+      margin-bottom: 16px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--main);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 6px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      color: var(--main);
+      font-size: clamp(24px, 5.6vw, 38px);
+      line-height: 1.35;
+    }
+
+    .lead {
+      margin: 0;
+      font-size: 15px;
+      color: #213036;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px 16px;
+      box-shadow: var(--shadow);
+      margin-bottom: 14px;
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 21px;
+      color: var(--main);
+      line-height: 1.45;
+      font-weight: 600;
+    }
+
+    .card p {
+      margin: 0 0 12px;
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 8px;
+    }
+
+    .checklist li {
+      background: #f7fafb;
+      border-radius: 12px;
+      padding: 10px 12px;
+      color: var(--text);
+      border: 1px solid #ecf1f2;
+      font-size: 14px;
+    }
+
+    .checklist li::before {
+      content: "✔ ";
+      color: var(--main);
+      font-weight: 500;
+    }
+
+    .btn-row {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: var(--main);
+      color: #fff;
+      font-weight: 400;
+      padding: 12px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .btn.secondary {
+      background: #fff;
+      color: var(--main);
+      border: 2px solid var(--main);
+    }
+
+    .btn.line {
+      background: #06C755;
+      color: #fff;
+    }
+
+    .note {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #5b6b71;
+      text-align: center;
+    }
+
+    .highlight-yellow {
+      background: linear-gradient(transparent 75%, #fee846 75%);
+      padding: 0 2px;
+    }
+
+    @media (min-width: 768px) {
+      .btn-row {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="badge">はじめての方へ</div>
+      <h1>宅配サービスってどんなサービス？</h1>
+      <p class="lead">まずはサービスの基本を分かりやすくご案内します。</p>
+    </section>
+
+    <section class="card">
+  <h2>宅配サービスについて</h2>
+  <p>スーパーサンシ宅配サービスは、毎日のお買い物をもっと便利に、もっとラクにするためのサービスです。ご自宅までサンシ自慢の鮮度抜群の食材はもちろん、重いものやかさばる物をお手元までお届けいたします。鍵付き専用ロッカー貸出で、不在時の受け取りにも配慮しています。</p>
+  <ul class="checklist">
+    <li>朝注文して当日配達</li>
+    <li>アプリでもお電話でも注文できます</li>
+    <li>決まった曜日にお届けなど、定期配達も対応</li>
+  </ul>
+</section>
+<section class="card">
+  <h2>こんな使い方ができます</h2>
+  <ul class="checklist">
+    <li>重たい物だけ宅配を利用する</li>
+    <li>普段は来店し、らくだ便だけ活用する</li>
+    <li>忙しい日や体調が気になる時だけ頼る</li>
+  </ul>
+</section>
+<section class="card">
+  <h2>ご相談だけでも大丈夫です</h2>
+  <p>「自分に合うか分からない」「少し話を聞いてから決めたい」という方も大歓迎です。前 里江子が直接ご案内いたします。</p>
+</section>
+
+    <div class="btn-row">
+      <a href="https://script.google.com/macros/s/AKfycbwB9T4HAlOU1fYD0W9LaRuXJIChEM8xlxVvkrAgLHurRpaAvQn8X5VqkbLWB6RJSVzuAw/exec" class="btn">今すぐ申し込む</a>
+      <a href="tel:09094256453" class="btn secondary">📞電話で相談</a>
+      <a href="https://lin.ee/roJpbkI" class="btn line">LINEで無料相談</a>
+    </div>
+
+    <p class="note"><a href="index.html" style="color:#2a424c;">← お知らせ一覧に戻る</a></p>
+  </main>
+</body>
+</html>

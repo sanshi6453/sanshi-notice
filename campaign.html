@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>新規入会キャンペーン</title>
+
+  <style>
+    :root {
+      --main: #2a424c;
+      --accent: #fee846;
+      --card: #ffffff;
+      --text: #24343a;
+      --line: #dfe6e8;
+      --shadow: 0 10px 30px rgba(42, 66, 76, 0.08);
+      --radius: 18px;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap');
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Zen Maru Gothic', -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+      background: linear-gradient(180deg, #fffef8 0%, #fff9d9 100%);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    .wrap {
+      width: min(920px, calc(100% - 24px));
+      margin: 0 auto;
+      padding: 18px 0 40px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--accent) 0%, #fff3a0 100%);
+      border: 2px solid var(--main);
+      border-radius: 24px;
+      padding: 24px 18px;
+      box-shadow: var(--shadow);
+      margin-bottom: 16px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--main);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 6px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      color: var(--main);
+      font-size: clamp(24px, 5.6vw, 38px);
+      line-height: 1.35;
+    }
+
+    .lead {
+      margin: 0;
+      font-size: 15px;
+      color: #213036;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px 16px;
+      box-shadow: var(--shadow);
+      margin-bottom: 14px;
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 21px;
+      color: var(--main);
+      line-height: 1.45;
+      font-weight: 600;
+    }
+
+    .card p {
+      margin: 0 0 12px;
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 8px;
+    }
+
+    .checklist li {
+      background: #f7fafb;
+      border-radius: 12px;
+      padding: 10px 12px;
+      color: var(--text);
+      border: 1px solid #ecf1f2;
+      font-size: 14px;
+    }
+
+    .checklist li::before {
+      content: "✔ ";
+      color: var(--main);
+      font-weight: 500;
+    }
+
+    .btn-row {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: var(--main);
+      color: #fff;
+      font-weight: 400;
+      padding: 12px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .btn.secondary {
+      background: #fff;
+      color: var(--main);
+      border: 2px solid var(--main);
+    }
+
+    .btn.line {
+      background: #06C755;
+      color: #fff;
+    }
+
+    .note {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #5b6b71;
+      text-align: center;
+    }
+
+    .highlight-yellow {
+      background: linear-gradient(transparent 75%, #fee846 75%);
+      padding: 0 2px;
+    }
+
+    @media (min-width: 768px) {
+      .btn-row {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="badge">キャンペーン情報</div>
+      <h1>新規入会キャンペーン</h1>
+      <p class="lead">お得に始められる期間限定特典のご案内です。</p>
+    </section>
+
+    <section class="card">
+  <h2>【期間限定】新規入会キャンペーン</h2>
+  <p>現在、宅配サービスご入会で<strong>3,000円キャッシュバック特典</strong>あり。さらに、70歳以上・子育て世帯はなんと月会費<span class="highlight-yellow">半年間無料</span>で、始めやすいキャンペーンを実施中です。</p>
+  <ul class="checklist">
+    <li>月会費の負担なく試せるお得なタイミングです</li>
+    <li>まだいいと思っている方こそ、今のうちに知っておくチャンスです</li>
+    <li>最短2～7日でご利用開始いただけます</li>
+  </ul>
+</section>
+<section class="card">
+  <h2>こんな方におすすめです</h2>
+  <ul class="checklist">
+    <li>買い物の負担を少しでも軽くしたい方</li>
+    <li>重たい物だけでも届けてほしい方</li>
+    <li>まずはお得に試してみたい方</li>
+  </ul>
+</section>
+
+    <div class="btn-row">
+      <a href="https://script.google.com/macros/s/AKfycbwB9T4HAlOU1fYD0W9LaRuXJIChEM8xlxVvkrAgLHurRpaAvQn8X5VqkbLWB6RJSVzuAw/exec" class="btn">今すぐ申し込む</a>
+      <a href="tel:09094256453" class="btn secondary">📞電話で相談</a>
+      <a href="https://lin.ee/roJpbkI" class="btn line">LINEで無料相談</a>
+    </div>
+
+    <p class="note"><a href="index.html" style="color:#2a424c;">← お知らせ一覧に戻る</a></p>
+  </main>
+</body>
+</html>

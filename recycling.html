@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>資源ごみ回収サービス</title>
+
+  <style>
+    :root {
+      --main: #2a424c;
+      --accent: #fee846;
+      --card: #ffffff;
+      --text: #24343a;
+      --line: #dfe6e8;
+      --shadow: 0 10px 30px rgba(42, 66, 76, 0.08);
+      --radius: 18px;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap');
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Zen Maru Gothic', sans-serif;
+      background: linear-gradient(180deg, #fffef8 0%, #fff9d9 100%);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    .wrap {
+      width: min(920px, calc(100% - 24px));
+      margin: 0 auto;
+      padding: 18px 0 40px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--accent), #fff3a0);
+      border: 2px solid var(--main);
+      border-radius: 24px;
+      padding: 24px 18px;
+      margin-bottom: 16px;
+    }
+
+    .badge {
+      background: var(--main);
+      color: #fff;
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      color: var(--main);
+      font-size: 28px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 18px;
+      margin-bottom: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h2 {
+      margin-bottom: 10px;
+      color: var(--main);
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .checklist li {
+      background: #f7fafb;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 6px;
+    }
+
+    .checklist li::before {
+      content: "✔ ";
+      color: var(--main);
+    }
+
+    .btn-row {
+      display: grid;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      text-align: center;
+      padding: 12px;
+      border-radius: 999px;
+      text-decoration: none;
+      background: var(--main);
+      color: #fff;
+    }
+
+    .btn.secondary {
+      background: #fff;
+      color: var(--main);
+      border: 2px solid var(--main);
+    }
+
+    .btn.line {
+      background: #06C755;
+      color: #fff;
+    }
+
+    .note {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #5b6b71;
+      text-align: center;
+    }
+
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+
+    <section class="hero">
+      <div class="badge">便利サービス</div>
+      <h1>資源ごみ回収サービス</h1>
+    </section>
+
+    <section class="card">
+      <h2>資源ごみ回収サービス</h2>
+      <p>
+        宅配サービスご利用の方は、ロッカーにて資源ごみ回収サービスをご利用いただけます。
+        外に持って行く手間が減り、日々の負担軽減につながります。
+        ※ごみだけの回収は行っておらず、配達の際に回収させていただきます。
+      </p>
+
+      <ul class="checklist">
+        <li>曜日や日時指定のない資源ごみ回収サービスとして使えます</li>
+        <li>重たい資源ごみの持ち運び不要</li>
+        <li>資源ごみをためておかなくても良い</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>毎日の暮らしが少しラクに</h2>
+      <p>
+        宅配だけでなく、資源ごみ回収まで活用いただくことで、
+        毎日の家事や外出の負担を減らしやすくなります。
+      </p>
+    </section>
+
+    <div class="btn-row">
+      <a href="https://script.google.com/macros/s/AKfycbwB9T4HAlOU1fYD0W9LaRuXJIChEM8xlxVvkrAgLHurRpaAvQn8X5VqkbLWB6RJSVzuAw/exec" class="btn">今すぐ申し込む</a>
+      <a href="tel:09094256453" class="btn secondary">📞電話で相談</a>
+      <a href="https://lin.ee/roJpbkI" class="btn line">LINEで無料相談</a>
+    </div>
+
+
+    <p class="note"><a href="index.html" style="color:#2a424c;">← お知らせ一覧に戻る</a></p>
+  </main>
+</body>
+</html>
